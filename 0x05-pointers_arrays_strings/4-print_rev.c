@@ -10,8 +10,9 @@ void print_rev(char *s)
 	int iter, iter_rev;
 
 	for (iter = 0; *(s + iter); iter++)
-	{}
-	for (iter_rev = iter; iter_rev >= 0; iter_rev--)
+	{
+	}
+	for (iter_rev = iter - 1; iter_rev >= 0; iter_rev--)
 	{
 		_putchar(s[iter_rev]);
 	}
