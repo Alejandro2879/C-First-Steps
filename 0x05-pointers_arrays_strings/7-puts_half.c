@@ -10,8 +10,7 @@ void puts_half(char *str)
 
 	for (iter1 = 0; str[iter1]; iter1++)
 	{}
-	(iter1 % 2 == 0) ? (iter1 = iter1 / 2) : (iter1 = iter1 / 2 - 1);
-
+	(iter1 % 2 == 0) ? (iter1 = iter1 / 2) : (iter1 = (iter1 / 2) + 1);
 	for (iter2 = iter1; str[iter2]; iter2++)
 		_putchar(str[iter2]);
 	_putchar('\n');
