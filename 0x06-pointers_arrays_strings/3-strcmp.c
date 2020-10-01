@@ -10,20 +10,20 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int iter;
+	int iter, result;
 
 	for (iter = 0; s1[iter] || s2[iter]; iter++)
 	{
 		if (s1[iter] > s2[iter])
 		{
-			return (15);
+			result = 15;
 		}
 		else if (s1[iter] < s2[iter])
 		{
-			return (-15);
+			result = -15;
 		}
 		else
-			return (0);
+			result = 0;
 	}
-	return (0);
+	return (result);
 }
