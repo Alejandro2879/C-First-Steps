@@ -11,20 +11,16 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int iter, iter2;
+	int iter;
 
-	for (iter = 0; src[iter]; iter++)
+	for (iter = 0; iter < n && src[iter]; iter++)
 	{
 		dest[iter] = src[iter];
 	}
-	if (iter < n)
+	for (; iter < n; iter++)
 	{
-		iter2 = iter;
-		while (iter2 < n)
-		{
-			dest[iter2] = '\0';
-			iter2++;
-		}
+		dest[iter] = '\0';
 	}
+
 	return (dest);
 }
