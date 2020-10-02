@@ -11,10 +11,8 @@ void reverse_array(int *a, int n)
 {
 	int iter, iter_rev, cont;
 
-	for (iter_rev = 0; iter_rev < n; iter_rev++)
-	{}
-	iter_rev = iter_rev - 1;
-	for (iter = 0; iter != iter_rev; iter++, iter_rev--)
+	iter_rev = n - 1;
+	for (iter = 0; iter < iter_rev; iter++, iter_rev--)
 	{
 		cont = a[iter];
 		a[iter] = a[iter_rev];
