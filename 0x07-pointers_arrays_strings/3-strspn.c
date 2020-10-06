@@ -10,7 +10,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int iter, counter, dev;
+	unsigned int iter, counter = 0, dev = 0;
 
 	for (iter = 0; s[iter] != 32; iter++)
 	{
