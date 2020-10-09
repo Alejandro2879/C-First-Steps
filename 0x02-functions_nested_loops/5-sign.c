@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_sing - function that prints the sign of a number.
+ * print_sign - function that prints the sign of a number.
  * @n: number to evaluate.
  * Return: 1, 0 or -1.
  */
