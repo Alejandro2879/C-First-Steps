@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _strdup - returns a pointer to a space in memory, which contains copy of str
+ * @str: String to duplicate
+ * Return: Pointer to the new string.
  */
 
 char *_strdup(char *str)
@@ -27,9 +27,9 @@ char *_strdup(char *str)
 }
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _strlen - Return the lenght of a string.
+ * @str: String to count.
+ * Return: Number of characters in str..
  */
 
 int _strlen(char *str)
