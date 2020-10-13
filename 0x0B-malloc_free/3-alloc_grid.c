@@ -25,7 +25,7 @@ int **alloc_grid(int width, int height)
 		bi_dim[rows] = malloc(height * sizeof(int *));
 		if (!bi_dim[rows])
 		{
-			free(bi_dim);
+			free(bi_dim[rows]);
 			return ('\0');
 		}
 	}
