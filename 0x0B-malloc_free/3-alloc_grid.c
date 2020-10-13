@@ -20,6 +20,7 @@ int **alloc_grid(int width, int height)
 
 	bi_dim = (int **) malloc(width * sizeof(int *));
 	if (!bi_dim)
+		free(bi_dim);
 		return ('\0');
 
 	for (rows = 0; rows < width; rows++)
