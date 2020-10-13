@@ -1,7 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * main - check the code for Holberton School students.
@@ -17,7 +16,7 @@ char *_strdup(char *str)
 	if (str == '\0')
 		return ('\0');
 
-	new_str = malloc(sizeof(str) * strlen(str));
+	new_str = malloc(sizeof(str) * _strlen(str));
 	if (!new_str)
 		return ('\0');
 	for (iter = 0; str[iter]; iter++)
@@ -25,4 +24,19 @@ char *_strdup(char *str)
 		*(new_str + iter) = *(str + iter);
 	}
 	return (new_str);
+}
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+
+int _strlen(char *str)
+{
+	int iter = 0;
+
+	while (str[iter])
+		iter++;
+	return (iter);
 }
