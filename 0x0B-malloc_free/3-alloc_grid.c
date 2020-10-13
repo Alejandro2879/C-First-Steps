@@ -13,33 +13,27 @@ int **alloc_grid(int width, int height)
 {
 	int **bi_dim, rows, iter, iter2;
 
-	if (width <= 0 || width == '\0')
-		return ('\0');
-	if (height <= 0 || height == '\0')
+	if (width <= 0 || height <= 0)
 		return ('\0');
 
 	bi_dim = (int **) malloc(width * sizeof(int *));
 	if (!bi_dim)
-	{
-		free(bi_dim);
 		return ('\0');
-	}
+
 	for (rows = 0; rows < width; rows++)
 	{
 		bi_dim[rows] = malloc(height * sizeof(int *));
 		if (!bi_dim[rows])
 		{
-			
+			free(bi_dim);
 			return ('\0');
 		}
-		}
+	}
 
 	for (iter = 0; iter < height; iter++)
 	{
 		for (iter2 = 0; iter2 < width; iter2++)
-		{
 			bi_dim[iter][iter2] = 0;
-		}
 	}
 	return (bi_dim);
 }
