@@ -16,13 +16,13 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return ('\0');
 
-	bi_dim = (int **) malloc(width * sizeof(int *));
+	bi_dim = (int **) malloc(height * sizeof(int *));
 	if (!bi_dim)
 		return ('\0');
 
 	for (iter = 0; iter < height; iter++)
 	{
-		bi_dim[iter] = malloc(height * sizeof(int *));
+		bi_dim[iter] = malloc(width * sizeof(int *));
 		if (!bi_dim[iter])
 		{
 			free(bi_dim);
