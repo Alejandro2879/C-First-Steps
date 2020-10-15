@@ -2,11 +2,9 @@
 #include <stdlib.h>
 
 /**
- * print_grid - prints a grid of integers
- * @grid: the address of the two dimensional grid
- * @width: width of the grid
- * @height: height of the grid
- *
+ * free_grid - Free memory.
+ * @grid: 2 dimensional array to free.
+ * @height: height of the grid.
  * Return: Nothing.
  */
 
@@ -17,5 +15,6 @@ void free_grid(int **grid, int height)
 	for (iter = 0; iter < height; iter++)
 	{
 		free(grid[height]);
+		free(grid);
 	}
 }
