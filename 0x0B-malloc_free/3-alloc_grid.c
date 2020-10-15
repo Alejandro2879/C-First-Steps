@@ -22,7 +22,7 @@ int **alloc_grid(int width, int height)
 
 	for (iter = 0; iter < height; iter++)
 	{
-		bi_dim[iter] = malloc(width * sizeof(int *));
+		bi_dim[iter] = malloc(width * sizeof(int));
 		if (!bi_dim[iter])
 		{
 			free(bi_dim);
