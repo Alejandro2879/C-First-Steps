@@ -31,11 +31,11 @@ int **alloc_grid(int width, int height)
 			return ('\0');
 		}
 	}
+		for (iter = 0; iter < height; iter++)
+		{
+			for (iter2 = 0; iter2 < width; iter2++)
+				bi_dim[iter][iter2] = 0;
+		}
 
-	for (iter = 0; iter < height; iter++)
-	{
-		for (iter2 = 0; iter2 < width; iter2++)
-			bi_dim[iter][iter2] = 0;
-	}
 	return (bi_dim);
 }
