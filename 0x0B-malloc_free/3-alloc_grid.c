@@ -11,7 +11,7 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **bi_dim, rows, iter, iter2;
+	int **bi_dim, fill, iter, iter2;
 
 	if (width <= 0 || height <= 0)
 		return ('\0');
@@ -20,22 +20,18 @@ int **alloc_grid(int width, int height)
 	if (!bi_dim)
 		return ('\0');
 
-	for (rows = 0; rows < width; rows++)
+	for (iter = 0; iter < height; iter++)
 	{
-		bi_dim[rows] = malloc(height * sizeof(int *));
-		if (!bi_dim[rows])
+		bi_dim[iter] = malloc(height * sizeof(int *));
+		if (!bi_dim[iter])
 		{
 			free(bi_dim);
-			for (iter = 0; iter < rows; iter++)
-				free(bi_dim[iter]);
+			for (iter2 = 0; iter2 < width; iter2++)
+				free(bi_dim[iter2]);
 			return ('\0');
 		}
+		for (fill = 0; fill < width; fill++)
+			bi_dim[iter][fill] = 0;
 	}
-		for (iter = 0; iter < height; iter++)
-		{
-			for (iter2 = 0; iter2 < width; iter2++)
-				bi_dim[iter][iter2] = 0;
-		}
-
 	return (bi_dim);
 }
