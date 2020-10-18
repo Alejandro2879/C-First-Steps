@@ -15,25 +15,25 @@ void times_table(void)
 		for (iter2 = 0; iter2 <= 9; iter2++)
 		{
 			numb = iter2 * iter1;
-			if (numb < 10)
+			if (iter2 == 0)
+				_putchar(numb + '0');
+			else if (numb < 10)
 			{
+				_putchar(44);
+				_putchar(32);
+				_putchar(32);
 				_putchar('0' + numb);
 			}
-			else
+			else if (numb >= 10)
 			{
+				_putchar(44);
+				_putchar(32);
 				first_dig = numb % 10;
 				contain = numb - first_dig;
 				second_dig = contain / 10;
 				_putchar('0' + second_dig);
 				_putchar('0' + first_dig);
 			}
-				if (iter2 < 9)
-				{
-					_putchar(44);
-					_putchar(32);
-					if (numb < 10)
-						_putchar(32);
-				}
 		}
 		_putchar('\n');
 	}
