@@ -21,7 +21,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		container = va_arg(list, char *);
 		printf("%s", container ? container : "(nil)");
-		printf("%s", (separator && iter < n - 1) ? separator : " ");
+		printf("%s", (separator && iter < n - 1) ? separator : "");
 	}
 	printf("\n");
 	va_end(list);
