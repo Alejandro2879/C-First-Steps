@@ -4,8 +4,9 @@
 
 /**
  * print_numbers - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * @separator: Comma to separate the numbers.
+ * @n: Number of arguments.
+ * Return: no return.
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -17,10 +18,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (iter = 0; iter < n; iter++)
 	{
 		printf("%d", va_arg(list, int));
-		if (iter < n -1 && separator)
+		if (iter < n - 1 && separator)
 			printf("%s", separator);
 		else if (iter < n - 1 && !separator)
-			printf(" ");
+			printf("");
 	}
 	printf("\n");
 	va_end(list);
