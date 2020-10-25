@@ -13,13 +13,15 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int iter;
 	va_list list;
+	char *container;
 
 	va_start(list, n);
+
 	for (iter = 0; iter < n; iter++)
 	{
-		printf("%s", (char *)(va_arg(list, char *)));
-		if (iter < n - 1 && separator)
-			printf("%s", separator);
+		container = va_arg(list, char *);
+		printf("%s", container ? container : "(nil)");
+		printf("%s", (separator && iter < n - 1) ? separator : " ");
 	}
 	printf("\n");
 	va_end(list);
