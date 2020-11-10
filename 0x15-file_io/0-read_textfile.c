@@ -2,9 +2,10 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * read_textfile -reads a text file and prints it to the POSIX standard output.
+ * @filename: Pointer to the file name.
+ * @letters:  number of letters it should read and print.
+ * Return:  number of letters it should readed.
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
