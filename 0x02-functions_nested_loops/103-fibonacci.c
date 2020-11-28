@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 /**
+ * main - Fibonacci.
  *
- *
- *
+ * Return: Always 0.
  */
 
-int main()
+int main(void)
 {
 	long int sum = 0, fib = 0;
 	int num1 = 1, num2 = 2, iter;
-	
+
 	for (iter = 0; sum < 4000000; iter++)
 	{
 		if (sum < 4000000)
