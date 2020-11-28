@@ -18,24 +18,24 @@ void print_times_table(int n)
 				c = a * b;
 				if (b > 0 && b <= n)
 				{
-			if (c < 10)
-			{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
-			}
-			if (c > 9 && c < 100)
-			{
-				_putchar(' ');
-				_putchar(' ');
-			}
-			if (c >= 100)
-				_putchar(' ');
-			}
+					if (c < 10)
+					{
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(' ');
+					}
+					if (c > 9 && c < 100)
+					{
+						_putchar(' ');
+						_putchar(' ');
+					}
+					if (c >= 100)
+						_putchar(' ');
+				}
 				if (c >= 100)
 					_putchar((c / 100) + '0');
 				if (c >= 10)
-			_putchar(((c / 10) % 10) + '0');
+					_putchar(((c / 10) % 10) + '0');
 				_putchar((c % 10) + '0');
 				if (b != 15 && b != n)
 					_putchar(',');
