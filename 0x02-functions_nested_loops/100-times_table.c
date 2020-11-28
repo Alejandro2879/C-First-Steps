@@ -1,46 +1,46 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
- * print_times_table - prints the n times table, starting with 0.
- * @n: Table of.
- * Return: No return.
+ * print_times_table - function that prints the n times table
+ * @n: n times table of the n number
+ * Return: nothing
  */
-
 void print_times_table(int n)
 {
-	int iter, iter2, mult = 0;
+	int a, b, c;
 
 	if (n >= 0 && n <= 15)
 	{
-		for (iter = 0; iter <= n; iter++)
+		for (a = 0; a <= n && a <= 15; a++)
 		{
-			for (iter2 = 0; iter2 <= n; iter2++)
+			for (b = 0; b <= n && b <= 15; b++)
 			{
-				mult = iter * iter2;
-				if (mult == 0)
+				c = a * b;
+				if (b > 0 && b <= n)
 				{
-					printf("%d", mult);
-					if (iter == 0 && iter2 < n)
-						printf(",   ");
-				}
-				else if (mult <= 9)
-				{
-					printf(",   ");
-					printf("%d", mult);
-				}
-				else if (mult >= 10 && mult < 100)
-				{
-					printf(",  ");
-					printf("%d", mult);
-				}
-				else if (mult >= 100)
-				{
-					printf(", ");
-					printf("%d", mult);
-				}
+			if (c < 10)
+			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(' ');
 			}
-			printf("\n");
+			if (c > 9 && c < 100)
+			{
+				_putchar(' ');
+				_putchar(' ');
+			}
+			if (c >= 100)
+				_putchar(' ');
+			}
+				if (c >= 100)
+					_putchar((c / 100) + '0');
+				if (c >= 10)
+			_putchar(((c / 10) % 10) + '0');
+				_putchar((c % 10) + '0');
+				if (b != 15 && b != n)
+					_putchar(',');
+			}
+			_putchar('\n');
 		}
 	}
 }
