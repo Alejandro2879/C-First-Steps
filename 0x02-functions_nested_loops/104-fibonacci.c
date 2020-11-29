@@ -16,7 +16,10 @@ int main(void)
 		fibo = num1 + num2;
 		num1 = num2;
 		num2 = fibo;
-		printf("%ld, ", fibo);
+		printf("%ld", fibo);
+		if (iter < 97)
+			printf(", ");
 	}
+	printf("\n");
 	return (0);
 }
