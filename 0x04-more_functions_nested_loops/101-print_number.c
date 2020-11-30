@@ -9,7 +9,8 @@
 
 void print_number(int n)
 {
-	int container = 0, num_a = 10, num_b;
+	unsigned int container = 0;
+	int num_a = 10, num_b;
 
 	if (n >= 0 && n < 10)
 		_putchar(n + 48);
