@@ -9,6 +9,7 @@
 void print_number(int n)
 {
 	int num_d = 10, mod;
+	unsigned int min;
 
 	if (n >=  0 && n <= 9)
 		_putchar(n + '0');
@@ -25,14 +26,15 @@ void print_number(int n)
 			n *= -1;
 			_putchar('-');
 		}
-		while (n / num_d > 9)
+		min = n;
+		while (min / num_d > 9)
 		{
 			num_d = num_d * 10;
 		}
 		while (num_d > 0)
 		{
-			mod = n / num_d;
-			n = n % num_d;
+			mod = min / num_d;
+			min = min % num_d;
 			_putchar(mod + 48);
 			num_d = num_d / 10;
 		}
