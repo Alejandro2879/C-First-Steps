@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _strst - that locates a substring..
+ * _strstr - that locates a substring..
  * @haystack: String.
  * @needle: Word to locate.
  * Return: Pointer to word.
