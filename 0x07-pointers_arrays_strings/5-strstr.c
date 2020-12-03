@@ -2,26 +2,23 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _strst - that locates a substring..
+ * @haystack: String.
+ * @needle: Word to locate.
+ * Return: Pointer to word.
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int iter1, iter2;
-	char *str = '\0';
+	int iter1;
 
-	for (iter1 = 0; haystack[iter1]; iter1++)
+	for (;  haystack[iter1];  haystack++)
 	{
-		for (iter2 = 0; needle[iter2]; iter2++ )
-		{
-			if (needle[iter2] == haystack[iter1])
-			{
-				str = &haystack[iter1];
-				break;
-			}
-		}
+		for (iter1 = 0; haystack[iter1] && needle[iter1] &&
+			     haystack[iter1] == needle[iter1]; iter1++)
+		{}
+		if (!needle[iter1])
+			return (haystack);
 	}
-	return (str);
+	return (0);
 }
