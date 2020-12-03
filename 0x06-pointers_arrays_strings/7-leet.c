@@ -7,7 +7,7 @@
  * Return: New string.
  */
 
-char *leet(char *s)
+char *leet(char *str)
 {
 	int i = 0;
 	int j;
