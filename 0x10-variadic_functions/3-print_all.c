@@ -84,6 +84,6 @@ void print_str(va_list list)
 
 	str = va_arg(list, char *);
 	if (!str)
-		str = (nil);
+		str = "(nil)";
 	printf("%s", str);
 }
