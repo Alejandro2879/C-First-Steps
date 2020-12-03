@@ -1,27 +1,36 @@
-#include "calc.h"
+#include <stdio.h>
+#include "3-calc.h"
+#include <stdlib.h>
 
 /**
+ * main - calculator.
+ * @argc: Argument count.
+ * @argv: Argument vector.
  *
- *
- *
- *
+ * Return: Always 0.
  */
 
-int main(int argc(), char **argv)
+int main(int argc, char **argv)
 {
 	int num1, num2;
-	char operator;
 
 	if (argc != 4)
 	{
-		print("Error\n");
+		printf("Error\n");
 		exit(98);
 	}
-
-	operator = argv(2);
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	calc = get_op_func(char operator, int num1, int num2);
-
+	if (get_op_func(argv[2]) == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+	if (num2 == 0 && (*argv[2] == '%' || *argv[2] == '/'))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	printf("%d\n", (get_op_func(argv[2])(num1, num2)));
 	return (0);
 }
