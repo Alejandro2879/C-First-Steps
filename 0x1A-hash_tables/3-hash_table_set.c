@@ -11,14 +11,13 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index = 0;
-	unsigned long int size = ht->size;
 	hash_node_t *node = NULL;
 
 	if (!key || !ht || !(*key) || !value)
 		return (0);
 
 	/*get index*/
-	index = key_index((const unsigned char *)key, size);
+	index = key_index((const unsigned char *)key, ht->size);
 
 	if (ht->array[index] && !(search_upd(key, value, ht->array[index])))
 		return (1);
